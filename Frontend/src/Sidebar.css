@@ -1,0 +1,108 @@
+.sidebar {
+    background-color: #171717;
+    color: #b4b4b4;
+    height: 100vh;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: solid 0.5px rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+
+.logo {
+    height: 25px;
+    width: 25px;
+    /* #fff */
+    background-color: transparent; 
+    border-radius: 50%;
+    object-fit: cover;
+
+
+  /* Add this line to invert the colors */
+  filter: invert(1);
+}
+
+button span {
+    font-size: 20px;
+}
+
+button:hover {
+    background-color: rgba(180, 180, 180, 0.05);
+}
+
+.history {
+    margin: 10px;
+    padding: 10px;
+    height: 100%;
+    flex-grow: 1; /* This makes the history list take up all available space */
+    overflow-y: auto; /* This enables vertical scrolling for the history list */
+    scrollbar-width: none; /* Hide the scrollbar for Firefox */
+}
+
+.history::-webkit-scrollbar {
+  display: none; /* Hide the scrollbar entirely */
+  width: 0; /* Ensures no space is reserved for it */
+}
+
+.history li {
+    list-style-type: none;
+    cursor: pointer;
+    padding: 2px 5px;
+    margin-bottom: 0.3rem;
+    font-size: 14px;
+    border: solid 10px transparent;
+
+    /* Add these lines to make it a flex container */
+    display: flex;
+    justify-content: space-between; /* This pushes the title and icon to opposite ends */
+    align-items: center; /* This vertically centers the icon with the text */
+}
+
+.history li:hover {
+    background-color: rgba(180, 180, 180, 0.05);
+    border-radius: 10px;
+}
+
+.sign {
+    margin: 10px;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    border-top: solid 0.25px rgba(255, 255, 255, 0.5);
+}
+
+.red-heart {
+    color: red; /* Changes the color to red */
+    font-size: 1rem; /* Makes the heart a little bigger than the surrounding text */
+    animation: pulse 1.5s infinite; /* Adds a pulse animation */
+}
+
+.fa-trash {
+    opacity: 0; /* Keep the opacity for the hover effect */
+    margin-left: 10px; /* Add a little spacing */
+}
+
+.history li:hover .fa-trash {
+    opacity: 1;
+    color: #fff;
+}
+
+.fa-trash:hover{
+    color: #f87171 !important;
+}
+
+.highlighted {
+    background-color: rgba(180, 180, 180, 0.05);
+    border-radius: 10px;
+}
